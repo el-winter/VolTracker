@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# gain data in excel format
+# gain date in excel format
 date_var=$(TZ=Europe/Moscow date +"%d.%m.%Y %H:%M")
 
 # /dev/mapper/rhel-root - tracing voume name | deleting duplicate spaces
 str=$(df -h  --output=source,size,used /dev/mapper/rhel-root | grep /dev/mapper/rhel-root | tr -s " ")
 #echo $str
 
-# removing volume name, 23 - length of volume name + space
+# removing volume name, 22 - length of volume name + space
 str=${str:22}
 #echo $str
 
