@@ -12,7 +12,7 @@ date_var=$(TZ=Europe/Moscow date +"%d.%m.%Y %H:%M")
 # deleting duplicate spaces
 str=$(df -h  --output=source,size,used $vol | grep $vol | tr -s " ")
 
-# removing volume name, 22 - length of volume name + space
+# removing volume name, $vol_length = length of volume name + space
 str=${str:$vol_length}
 
 # ' ' -> ';' substitution
